@@ -1,0 +1,12 @@
+{% include 'navbar.html' %}
+
+<h2>CRUD - DELETE a task</h2>
+
+<form method="POST" autocomplete="off">
+
+    {% csrf_token %}
+    <!-- {{form.as_p}} -->
+    <h3>Are you sure you want to delete a task " {{object}} " ?</h3>
+    <a href="{% url 'viewTasks' %}">View tasks</a>
+    <input type="submit" value="Submit"/>
+</form>

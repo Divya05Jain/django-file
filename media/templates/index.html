@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    
+{%include 'navbar.html'%}
+
+<h1>Home page</h1>
+
+<h6>templates checking</h6>
+<a href="{% url 'dashboard' %}"> Dashboard</a>
+
+<br><br>
+<a href="{% url 'login' %}">Login</a>
+<br><br>
+<a href="{% url 'create-task' %}"> create a task</a>
+<br><br>
+<a href="{% url 'viewTasks' %}">View tasks</a>
+<br><br>
+<a href="{% url 'register' %}"> Register a user</a>
+<br><br><br><br>
+
+<img src="{% static 'images/Designer.jpeg' %}" alt="">
+<script src="{% static 'js/app.js' %}"></script>
+<!-- 
+{% for cl in client %}
+<p> {{cl.id}} </p>
+<br>
+<p> {{cl.name}} </p>
+{% endfor %} -->
+<!-- {% for task in tasks %}
+<p>{{ task.id }}</p>
+<p>{{ task.tile }}</p>
+<p> {{ task.content }} </p>
+
+{% endfor %} -->
+
+</body>
+</html>

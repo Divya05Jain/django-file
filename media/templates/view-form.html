@@ -1,0 +1,13 @@
+{% include 'navbar.html' %}
+<h1>Forms</h1>
+
+{% for task in tasks %}
+{{task.tile}} <br>
+{{task.content}}
+<br>
+<a href="{% url 'updateTasks' task.id %}">update-task</a>
+<br>
+
+<a href="{% url 'deleteTasks' task.id %}">delete-task</a>
+<br><br>
+{% endfor %}

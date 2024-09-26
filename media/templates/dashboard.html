@@ -1,0 +1,77 @@
+<!-- {% include 'navbar.html' %}
+<h1>Dashboard</h1>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<a href="{%  url 'logout' %}">Logout</a>
+
+<canvas id="groundWaterLevelsChart" width="400" height="200"></canvas>
+<script>
+    fetch("{% url 'ground_water_levels_chart' %}")
+    .then(response => response.json())
+    .then(data => {
+        var ctx = document.getElementById('groundWaterLevelsChart').getContext('2d');
+        var myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: data.labels,  // Well IDs
+                datasets: [
+                    {
+                        label: '2022 Water Levels',
+                        data: data['2022_levels'],
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        fill: false
+                    },
+                    {
+                        label: '2023 Water Levels',
+                        data: data['2023_levels'],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        fill: false
+                    },
+                    {
+                        label: '2024 Water Levels',
+                        data: data['2024_levels'],
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>
+<canvas id="wellDistributionDistrictChart" width="400" height="200"></canvas>
+<script>
+    fetch("{% url 'well_distribution_by_district_chart' %}")
+    .then(response => response.json())
+    .then(data => {
+        var ctx = document.getElementById('wellDistributionDistrictChart').getContext('2d');
+        var myBarChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: data.labels,  // District names
+                datasets: [{
+                    label: 'Well Distribution by District',
+                    data: data.values,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script> -->

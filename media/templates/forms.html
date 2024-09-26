@@ -1,0 +1,12 @@
+{% include 'navbar.html' %}
+
+<h1>forms</h1>
+
+<form method="POST" autocomplete="off">
+
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit"/>
+</form>
+
+<a href="{% url 'viewTasks' %}">View tasks</a>

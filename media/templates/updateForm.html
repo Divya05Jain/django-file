@@ -1,0 +1,13 @@
+{% include 'navbar.html' %}
+
+<h2>CRUD- Update a form</h2>
+
+
+<h1>Update Form</h1>
+
+<form method="POST" autocomplete="off">
+
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit"/>
+</form>
